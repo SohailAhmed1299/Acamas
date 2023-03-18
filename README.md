@@ -110,15 +110,21 @@ select * from rolls_recipes;
 
 select count(roll_id) from customer_orders;
 
+![1](https://user-images.githubusercontent.com/90980952/226140386-7f3456a2-a4eb-4ec9-b15d-225dbf0bee58.JPG)
+
 --2 How many unique customer order were made?
+
 
 Select COUNT(distinct customer_id) from customer_orders;
 
+![2](https://user-images.githubusercontent.com/90980952/226140395-7716a43a-26e8-4cbc-9ae6-a719a9ef745b.JPG)
 
 --3  How many succesful order were deliverd?
 
+
 Select driver_id, COUNT(distinct order_id) from driver_order where cancellation not in ('cancellation' , 'customer cancellation') group by driver_id
 
+![3](https://user-images.githubusercontent.com/90980952/226140398-c7ece4f7-5377-44dc-92f4-629fdc659fd8.JPG)
 
 --4 How many each type of roll were deliverd?
 
@@ -138,6 +144,8 @@ on a.order_id=b.order_id
 where b.cancellation not like '%Cancellation%' or b.cancellation is Null
 group by a.roll_id;
 
+![4](https://user-images.githubusercontent.com/90980952/226140419-28746cbc-ee2f-438d-898f-bb2b67490f65.JPG)
+
 --5 How many non veg and veg rolls were ordered by each customer?
 
 
@@ -147,6 +155,7 @@ Select customer_id,roll_id,COUNT(roll_id) cnt
 from customer_orders
 group by customer_id,roll_id)a inner join rolls b on a.roll_id = b.roll_id;
 
+![5](https://user-images.githubusercontent.com/90980952/226140425-ebde2236-319f-4e35-bf50-7f70dbd2710d.JPG)
 
 --6. What is the maximum number of rolls delivered in a single order?
 
@@ -161,6 +170,8 @@ select order_id from
 (select *, case when cancellation in ('cancellation' , 'customer cancellation') then 'c' else 'nc' end as order_cancel_details from driver_order) a 
 where order_cancel_details = 'nc'))b
 group by order_id)c)d where rnk = 1;
+
+![6](https://user-images.githubusercontent.com/90980952/226140431-ffa3e264-0646-4e5b-ac36-a23942c1f9d6.JPG)
 
 --7 For each customer, how many delivered rolls had at least 1 chnages and how many had no changes?
 
@@ -185,6 +196,7 @@ from temp_customer_orders where order_id in (
 select order_id from temp_drivers_order where new_cancellation != 0))a
 group by customer_id,change_or_no_change ;
 
+![7](https://user-images.githubusercontent.com/90980952/226140434-16e14810-6b84-4b87-8c60-3fd67bf702f4.JPG)
 
 --8 How many rolls were deliverd that had both exclusion and inclusinon?
 
@@ -209,6 +221,9 @@ from temp_customer_orders where order_id in (
 select order_id from temp_drivers_order where new_cancellation != 0))a
 group by change_or_no_change
 
+![8](https://user-images.githubusercontent.com/90980952/226140438-7c0f4f0b-4de4-4ea9-9d7f-8530acbf2b15.JPG)
+
+
 --9 What is the total number of rolls order for each hour of the day?
 
 select * from customer_orders;
@@ -220,11 +235,16 @@ from
 group by 
 hourly_range;
 
+![9](https://user-images.githubusercontent.com/90980952/226140441-99570d2f-460f-4a62-8503-88e667a8f6f1.JPG)
+
 --10 What is the total number of rolls order for each hour of the day by a customer ?
 
 Select order_id,hourly_range,count(customer_id) customer from
 (select *,concat(cast(DATEPART(HOUR,order_date) as varchar),'-',cast(DATEPART(HOUR,order_date)+1 as varchar)) Hourly_Range from customer_orders) a
 group by hourly_range,Order_id;
+
+![10](https://user-images.githubusercontent.com/90980952/226140448-caff5797-9ee0-494c-9f16-b974ab75a5bf.JPG)
+
 
 --11 What was the number of orders for each day of week?
 
@@ -233,8 +253,11 @@ from
 (select *,datename(WEEKDAY, order_date) week_name from customer_orders) a
 group by week_name;
 
+![11](https://user-images.githubusercontent.com/90980952/226140456-926968a3-c57b-4d36-bba8-fb5a4513ff6c.JPG)
 
---What was the average time of minute it took for each driver to arrive at thepickup point the order?
+
+
+--12 What was the average time of minute it took for each driver to arrive at thepickup point the order?
 select * from customer_orders;
 
 select driver_id,sum(Difference)/COUNT(order_id) avg_min from(
@@ -246,5 +269,7 @@ b.driver_id,b.pickup_time,b.distance,b.duration,b.cancellation, DATEDIFF(minute,
 from customer_orders a inner join driver_order b on a.order_id =b.order_id 
 where b.pickup_time is not null) a )b where rnk = 1 )c
 group by driver_id;
+
+![12](https://user-images.githubusercontent.com/90980952/226140464-98344860-d7a4-4a46-820d-d93116f36f64.JPG)
 
 
