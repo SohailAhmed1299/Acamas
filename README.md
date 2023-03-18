@@ -80,6 +80,7 @@ values (1,101,1,'','','01-01-2021  18:05:02'),
 (10,104,1,null,null,'01-11-2021 18:34:49'),
 (10,104,1,'2,6','1,4','01-11-2021 18:34:49');
 
+# List of tables output:
 
 select * from customer
 
@@ -105,6 +106,8 @@ select * from rolls;
 select * from rolls_recipes;
 
 ![rolls_recipes](https://user-images.githubusercontent.com/90980952/226123468-9e3503ae-57b1-434a-a33a-bed5265e5c11.JPG)
+
+# Questions with solutions.
 
 --1 How many rolls were order ?
 
