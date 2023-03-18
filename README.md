@@ -1,5 +1,7 @@
 # SQL Project on Faaso's
 
+# Creation of tables.
+
 CREATE TABLE driver(driver_id integer,reg_date date); 
 
 INSERT INTO driver(driver_id,reg_date) 
@@ -54,6 +56,7 @@ INSERT INTO driver_order(order_id,driver_id,pickup_time,distance,duration,cancel
 (9,2,null,null,null,'Customer Cancellation'),
 (10,1,'01-11-2021 18:50:20','10km','10minutes',null);
 
+# Updating the table which to fix discrepancies in the data
 update driver_order
 set pickup_time = '01-11-2021 18:50:20'
 where order_id = 10;
@@ -78,8 +81,30 @@ values (1,101,1,'','','01-01-2021  18:05:02'),
 (10,104,1,'2,6','1,4','01-11-2021 18:34:49');
 
 
-select * from rolls_recipes;
+select * from customer
+
+![customer_orders](https://user-images.githubusercontent.com/90980952/226123365-531c330d-9da5-4ae3-9fdb-f14b19fdde8c.JPG)
+_orders;
+
+Select * from driver;
+
+![Driver](https://user-images.githubusercontent.com/90980952/226123377-586e75a1-6d15-45b3-a47a-08551269bc88.JPG)
+
+Select * from driver_order;
+
+![Driver Order](https://user-images.githubusercontent.com/90980952/226123398-21887b99-6926-41c9-a432-919222093a42.JPG)
+
+Select * from ingredients;
+
+![Ingridients](https://user-images.githubusercontent.com/90980952/226123409-911a7dc1-2016-4ad8-bcd4-0e2dfb0ac4db.JPG)
+
 select * from rolls;
+
+![Rolls](https://user-images.githubusercontent.com/90980952/226123419-e3ea357b-1e81-4f0d-99c2-b637d4680229.JPG)
+
+select * from rolls_recipes;
+
+![rolls_recipes](https://user-images.githubusercontent.com/90980952/226123468-9e3503ae-57b1-434a-a33a-bed5265e5c11.JPG)
 
 --1 How many rolls were order ?
 
