@@ -275,6 +275,8 @@ group by driver_id;
 
 ![12](https://user-images.githubusercontent.com/90980952/226140464-98344860-d7a4-4a46-820d-d93116f36f64.JPG)
 
+
+
 # SQL Project on Population Census
 
 Data Sets
@@ -292,6 +294,86 @@ The following data set contains information reagarding  District, State, Area Km
 After importing the both the data set, i joined both the table:
 
 ![Capture](https://user-images.githubusercontent.com/90980952/229322766-7ce2064b-b00b-4133-82fc-dda14400a4da.JPG)
+
+Computing basic information on both of the data set 
+
+![Capture1](https://user-images.githubusercontent.com/90980952/229322955-5700f806-511b-4b1c-88ff-1b7870c12d47.JPG)
+
+
+-- Selecting all the data from the state Jharkand and Bihar
+
+
+![1](https://user-images.githubusercontent.com/90980952/229322987-d20d4f1d-ff41-44da-948f-9bee105d12f1.JPG)
+
+
+-- Total population of India
+
+
+![2](https://user-images.githubusercontent.com/90980952/229323004-3eec5aa5-ee78-42a7-bdaa-51889736b7e5.JPG)
+
+
+--Total population of India by state
+
+
+![3](https://user-images.githubusercontent.com/90980952/229323014-4af6ac16-6bb3-4351-8540-318ff65350ce.JPG)
+
+
+-- Total Average growth  of India
+
+
+![4](https://user-images.githubusercontent.com/90980952/229323028-54636c70-7cad-4618-8662-3b10febd65bf.JPG)
+
+
+--Total Average growth  of India by state
+
+
+![5](https://user-images.githubusercontent.com/90980952/229323050-61974f3a-a5c2-4edb-9695-c283d900f384.JPG)
+
+
+--Total average sex ratio of India by state
+
+
+![6](https://user-images.githubusercontent.com/90980952/229323066-d558f05c-7ec8-40a0-8d10-b3242050c86f.JPG)
+
+
+--Total average literacy o of India by state
+
+
+![7](https://user-images.githubusercontent.com/90980952/229323090-122d8830-3ab6-4d64-9a0f-25c44f2c8f61.JPG)
+
+
+--Top 3 states with growth sate in India
+
+
+
+![8](https://user-images.githubusercontent.com/90980952/229323101-14718d2d-4ae1-4f0d-9792-e9c008dfb23b.JPG)
+
+
+--Bottom 3 states with sex ratio sate in India
+
+
+![9](https://user-images.githubusercontent.com/90980952/229323138-90c7f9a5-6d07-4b29-87a8-9c321679dcd6.JPG)
+
+
+--Top 3 states with sex ratio sate in India
+
+
+![10](https://user-images.githubusercontent.com/90980952/229323165-c577f9b4-3eb3-46e7-b4b7-392c98b03043.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
