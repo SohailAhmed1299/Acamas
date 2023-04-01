@@ -275,4 +275,24 @@ group by driver_id;
 
 ![12](https://user-images.githubusercontent.com/90980952/226140464-98344860-d7a4-4a46-820d-d93116f36f64.JPG)
 
+# SQL Project on Population Census
+
+Data Sets
+
+The following data set contains information reagarding District, State, Growth, Sex ratio, Literacy 
+
+![dataset 1](https://user-images.githubusercontent.com/90980952/229322675-47e7f151-5dd1-42ac-8497-466452d2f39e.JPG)
+
+
+The following data set contains information reagarding  District, State, Area Km2, Population
+
+
+![Dataset2](https://user-images.githubusercontent.com/90980952/229322731-a4d0f586-5ce7-416c-b774-6cfa59580ca2.JPG)
+
+After importing the both the data set, i joined both the table:
+
+![Capture](https://user-images.githubusercontent.com/90980952/229322766-7ce2064b-b00b-4133-82fc-dda14400a4da.JPG)
+
+
+
 
