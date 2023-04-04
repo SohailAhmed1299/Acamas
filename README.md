@@ -419,7 +419,7 @@ Computing basic information on both of the data set
 20- Calculation Bottom 3 district with highest literacy rate from each state.
 
 
-
+![20](https://user-images.githubusercontent.com/90980952/229884072-c7baa5e6-6cc2-4f61-a617-d66762572c95.JPG)
 
 
 
