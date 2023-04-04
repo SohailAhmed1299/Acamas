@@ -1,6 +1,6 @@
 # SQL Project on Faaso's
 
-# Creation of tables.
+## Creation of tables.
 
 CREATE TABLE driver(driver_id integer,reg_date date); 
 
@@ -56,7 +56,7 @@ INSERT INTO driver_order(order_id,driver_id,pickup_time,distance,duration,cancel
 (9,2,null,null,null,'Customer Cancellation'),
 (10,1,'01-11-2021 18:50:20','10km','10minutes',null);
 
-# Updating the table which to fix discrepancies in the data
+## Updating the table which to fix discrepancies in the data
 update driver_order
 set pickup_time = '01-11-2021 18:50:20'
 where order_id = 10;
@@ -80,7 +80,7 @@ values (1,101,1,'','','01-01-2021  18:05:02'),
 (10,104,1,null,null,'01-11-2021 18:34:49'),
 (10,104,1,'2,6','1,4','01-11-2021 18:34:49');
 
-# List of tables output:
+## List of tables output:
 
 select * from customer
 
@@ -107,7 +107,7 @@ select * from rolls_recipes;
 
 ![rolls_recipes](https://user-images.githubusercontent.com/90980952/226123468-9e3503ae-57b1-434a-a33a-bed5265e5c11.JPG)
 
-# Questions with solutions.
+## Questions with solutions.
 
 --1 How many rolls were order ?
 
@@ -299,6 +299,7 @@ Computing basic information on both of the data set
 
 ![Capture1](https://user-images.githubusercontent.com/90980952/229322955-5700f806-511b-4b1c-88ff-1b7870c12d47.JPG)
 
+## Question and Solutions of the following Project
 
 1- Selecting all the data from the state Jharkand and Bihar.
 
